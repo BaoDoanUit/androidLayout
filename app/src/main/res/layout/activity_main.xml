@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_columnWeight="3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:background="#1E88E5"
+        android:id="@+id/View1"
+        android:textSize="30sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="View 1"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guide"
+        app:layout_constraintRight_toLeftOf="@id/View2"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:background="#F20"
+        android:id="@+id/View2"
+        android:textSize="30sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="View 2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/View1"
+        app:layout_constraintTop_toTopOf="parent"/>
+<androidx.constraintlayout.widget.Guideline
+    android:orientation="vertical"
+    android:id="@+id/guide"
+    app:layout_constraintGuide_percent="0.15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
